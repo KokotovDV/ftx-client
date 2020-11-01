@@ -1,0 +1,7 @@
+spring:
+  main:
+    web-application-type: none
+
+ftx-client:
+  websocket:
+    url: "wss://ftx.com/ws/"
