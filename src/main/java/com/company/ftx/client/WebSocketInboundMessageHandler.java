@@ -17,7 +17,7 @@ public class WebSocketInboundMessageHandler implements GenericHandler<String> {
         JsonObject jsonObject = JsonParser.parseString(payload).getAsJsonObject();
         if (jsonObject.isJsonObject() && jsonObject.has("data")) {
             JsonObject data = jsonObject.get("data").getAsJsonObject();
-            if (data.has("bid")  && data.has("ask")) {
+            if (data.has("bid") && data.has("ask")) {
                 stringBuilder.append("bid:");
                 stringBuilder.append(data.get("bid").getAsString());
                 stringBuilder.append(", ask:");
